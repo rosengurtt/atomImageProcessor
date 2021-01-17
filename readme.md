@@ -1,5 +1,9 @@
 # Instructions
 
+The implementation uses C# and runs in Windows. It probably works in Linux, but I didn't test it in Linux.
+It uses the file system for retrieving and caching the images. The image processing is done using the free
+library SkiaSharp.
+
 Download the source code and compile it in VS.
 Setup a folder with the drink images and save the path in the appSettings file in the setting "RawImagesFolder"
 Setup another folder for the images cache and set the corresponding setting in appSettings
@@ -9,7 +13,8 @@ The provided appSettings will setup the rest Api with the uri http://localhost:8
 To use the API, the parameter "imageName" must be provided. This parameter is the name of the image file (with or without the png extension)
 
 If the user wants to resize the image, he can pass the parameters horizontalSize and/or verticalSize. If both are passed and they don't have
-the same horiz to vertical rate as the raw image, only one of the 2 parameters is used (the one that makes the image smaller)
+the same horiz to vertical rate as the raw image, only one of the 2 parameters is used (the one that makes the image smaller). In any case
+the image will keep always the right horiz to vertical ratio so the image is not distorted
 
 If the user wants to add a watermark, the parameter "watermark" has to be provided
 
