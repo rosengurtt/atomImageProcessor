@@ -22,7 +22,8 @@ namespace imageProcessor.Controllers
 
         /// <summary>
         /// Retrieves the image that has a file name of "imageName" scaled to a max horizontal sixe of horizontalSizeInPixels
-        /// and a max vertical size of verticalSizeInPixels
+        /// and a max vertical size of verticalSizeInPixels. If both parameters are provided, it returns an image with the
+        /// original horizontal to vertical ratio that has the width or height provided, whichever makes the image smaller
         /// 
         /// If the "watermark" parameter is included in the request, it adds the watermark to the image
         /// 

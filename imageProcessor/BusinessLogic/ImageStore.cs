@@ -12,8 +12,8 @@ namespace imageProcessor.BusinessLogic
 
         public ImageStore(IOptions<AppConfig> appConfiguration)
         {
-            _rawImagesFolder = Path.Combine(Directory.GetCurrentDirectory(), appConfiguration.Value.RawImagesFolder);
-            _processedImagesFolder = Path.Combine(Directory.GetCurrentDirectory(), appConfiguration.Value.ProcessedImagesFolder);
+            _rawImagesFolder = appConfiguration.Value.RawImagesFolder;
+            _processedImagesFolder = appConfiguration.Value.ProcessedImagesFolder;
         }
         /// <summary>
         /// This implementation of the store saves the files to the file system
